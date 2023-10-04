@@ -172,4 +172,4 @@ If it is succesful you should see ajson payload return that looks like this:
 }
 ```
 
-We'll need to generate AWS CLI credits from IAM user in order to the user AWS CLI.
+We'll need to generate AWS CLI credenials from IAM user in order to the user AWS CLI.
