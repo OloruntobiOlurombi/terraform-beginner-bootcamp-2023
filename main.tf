@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "terraform-begineer-bootcamp-2023"
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
+
   required_providers {
     random = {
       source = "hashicorp/random"
@@ -15,6 +22,9 @@ terraform {
 
 provider "aws" {
   # Configuration options
+  region = "us-east-1"
+  #access_key = 
+  #secret_key = 
 }
 
 # https://registry.terraform.io/providers/hashicorp/random/latest/docs
