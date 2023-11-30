@@ -1,7 +1,6 @@
 variable "user_uuid" {
   description = "User UUID"
   type        = string
-  default = "7086a277-3bf7-465e-9021-60e6c43f32f3"
   
   validation {
     condition     = can(regex("^([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})$", var.user_uuid))
