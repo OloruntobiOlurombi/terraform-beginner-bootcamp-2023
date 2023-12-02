@@ -10,7 +10,19 @@ variable "user_uuid" {
 }
 
 variable "buket_name" {
-  description = "The name of the s3 bucket"
+  #description = "The name of the s3 bucket"
   type = string 
   default = "f17a0oifpuowri4pnl58r53bjwkkfqbq"
+}
+
+variable "index_html_filepath" {
+  type = string
+  default = "/workspace/terraform-beginner-bootcamp-2023/public/index.html"
+
+}
+
+variable "error_html_filepath" {
+  type = string
+  default = "/workspace/terraform-beginner-bootcamp-2023/public/error.html"
+
 }
