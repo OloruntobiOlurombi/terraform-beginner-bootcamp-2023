@@ -26,3 +26,8 @@ variable "error_html_filepath" {
   default = "/workspace/terraform-beginner-bootcamp-2023/public/error.html"
 
 }
+
+variable "content_version" {
+  description = "The version of content (positive integer starting at 1)"
+  type        = number
+}
