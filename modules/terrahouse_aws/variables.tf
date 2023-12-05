@@ -8,7 +8,7 @@ variable "user_uuid" {
   }
 }
 
-variable "buket_name" {
+variable "bucket_name" {
   description = "The name of the s3 bucket"
   type = string 
   default = "f17a0oifpuowri4pnl58r53bjwkkfqbq"
