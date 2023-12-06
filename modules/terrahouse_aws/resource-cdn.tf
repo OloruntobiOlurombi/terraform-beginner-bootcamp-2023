@@ -62,3 +62,25 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     cloudfront_default_certificate = true
   }
 }
+
+resource "null_resource" "invalidate_cache" {
+  triggers = {
+    content_version = terraform.workspace
+  }
+
+  provisioner "local-exec" {
+    command = <<-EOT
+      aws cloudfront create-invalidation \
+        --distribution-id ${aws_cloudfront_distribution.s3_distribution.id} \
+        --paths '/*'
+    EOT
+    interpreter = ["/bin/bash", "-c"]
+   # working_dir = "${path.module}"  # Optional: Set the working directory if needed
+    environment = {
+      #AWS_ACCESS_KEY_ID     = ""
+      #AWS_SECRET_ACCESS_KEY = ""
+    }
+  }
+
+  depends_on = [aws_cloudfront_distribution.s3_distribution]
+}
