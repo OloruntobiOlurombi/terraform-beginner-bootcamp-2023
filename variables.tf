@@ -15,6 +15,7 @@ variable "bucket_name" {
   default = "f17a0oifpuowri4pnl58r53bjwkkfqbq"
 }
 
+/*
 variable "index_html_filepath" {
   type = string
   default = "/workspace/terraform-beginner-bootcamp-2023/public/index.html"
@@ -26,3 +27,4 @@ variable "error_html_filepath" {
   default = "/workspace/terraform-beginner-bootcamp-2023/public/error.html"
 
 }
+*/
