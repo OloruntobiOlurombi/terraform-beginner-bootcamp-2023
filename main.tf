@@ -1,3 +1,11 @@
+terraform {
+  cloud {
+      organization = "terraform-begineer-bootcamp-2023"
+      workspaces {
+        name = "terraform-cloud"
+      }
+    }
+}
 module "terrahouse_aws"{
   source = "./modules/terrahouse_aws"
   user_uuid = var.user_uuid
